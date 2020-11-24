@@ -116,6 +116,9 @@ set timeoutlen=1000        " speed vim up
 set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set ttyfast                " Rendering
 set tw=200                 " Line Length set to 200 😲
+" Use smart case for searching
+set ignorecase
+set smartcase
 
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
