@@ -56,13 +56,14 @@ Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 " Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 
-
-" Coc related plugins
-" Plug 'coc-extensions/coc-svelte'
-" coc-explorer 
-" coc-snippets 
-" coc-svelte 
-" jest-snippets
+" Coc extension list
+let g:coc_global_extensions = [
+      \ 'coc-explorer',
+      \ 'coc-snippets',
+      \ 'coc-svelte',
+      \ 'jest-snippets',
+      \ 'ReactSnippets'
+      \]
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
