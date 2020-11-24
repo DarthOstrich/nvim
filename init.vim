@@ -26,7 +26,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'morhetz/gruvbox'
 " Plug 'jnurmine/zenburn' "Theme plugin
-Plug 'ryanoasis/vim-devicons' "Icons for filetypes
+" Plug 'ryanoasis/vim-devicons' "Icons for filetypes
 Plug 'vim-airline/vim-airline' "Status bar
 Plug 'vim-airline/vim-airline-themes' "Applicable themes
 Plug 'ap/vim-css-color' "  color name highlighter
@@ -37,7 +37,8 @@ Plug 'mxw/vim-jsx' "JSX syntax highlighting
 Plug 'jparise/vim-graphql' "graphql syntax highlighting
 Plug 'digitaltoad/vim-pug' "Pug highlighting
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
+" Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'leafOfTree/vim-svelte-plugin'
 
 " Tools
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -233,7 +234,7 @@ let g:prettier#autoformat = 0
 let g:prettier#config#bracket_spacing = 'true'
 
 " runs prettier on file formats
-autocmd BufWritePre *.html,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+autocmd BufWritePre *.html,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte PrettierAsync
 
 
 " Emmet
