@@ -58,12 +58,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 
 " Coc extension list
 let g:coc_global_extensions = [
-      \ 'coc-explorer',
+      \ 'coc-ultisnips',
       \ 'coc-snippets',
+      \ 'coc-explorer',
+      \ 'ReactSnippets' ,
+      \ 'coc-vimlsp',
+      \ 'coc-tsserver',
       \ 'coc-svelte',
-      \ 'ReactSnippets'
+      \ 'coc-json',
+      \ 'coc-html',
+      \ 'coc-css',
       \]
-
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 
