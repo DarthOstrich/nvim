@@ -137,6 +137,7 @@ set clipboard=unnamed
 
 " remap Ctrl-p for finding files run Fzf :Files command
 nnoremap <C-p> :Files<Cr>
+nnoremap <C-f> :Rg<Cr>
 
 " Disable highlight with esc
 nnoremap <esc> :noh<return><esc>
