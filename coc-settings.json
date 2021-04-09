@@ -8,5 +8,22 @@
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
+  },
+  // coc-stylelint
+  "stylelint.config": {
+    "rules": {
+      "block-no-empty": true,
+      "color-no-invalid-hex": true,
+      "declaration-bang-space-after": "never",
+      "declaration-block-no-duplicate-properties": true,
+      "declaration-block-semicolon-newline-after": "always-multi-line",
+      "declaration-block-single-line-max-declarations": 1,
+      "no-duplicate-selectors": true,
+      "no-extra-semicolons": true,
+      "number-no-trailing-zeros": true,
+      "selector-max-class": 3,
+      "selector-max-id": 1,
+      "value-list-comma-space-after": "always"
+    }
   }
 }

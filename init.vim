@@ -68,6 +68,7 @@ let g:coc_global_extensions = [
       \ 'coc-json',
       \ 'coc-html',
       \ 'coc-css',
+      \ 'coc-stylelint',
       \]
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -119,6 +120,7 @@ set dir=/tmp
 set timeoutlen=1000        " speed vim up
 set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set ttyfast                " Rendering
+set lazyredraw
 set tw=200                 " Line Length set to 200 😲
 " Use smart case for searching
 set ignorecase
@@ -243,7 +245,7 @@ let g:prettier#autoformat = 0
 let g:prettier#config#bracket_spacing = 'true'
 
 " runs prettier on file formats
-autocmd BufWritePre *.html,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte PrettierAsync
+" autocmd BufWritePre *.html,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte PrettierAsync
 
 
 " Emmet
