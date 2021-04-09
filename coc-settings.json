@@ -9,8 +9,13 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
-  // coc-stylelint
-  "stylelint.config": {
+  // disable coc-css to use stylelintplus
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "wxss.validate": false,
+  // coc-stylelintplus
+  "stylelintplus.config": {
     "rules": {
       "block-no-empty": true,
       "color-no-invalid-hex": true,

@@ -68,7 +68,7 @@ let g:coc_global_extensions = [
       \ 'coc-json',
       \ 'coc-html',
       \ 'coc-css',
-      \ 'coc-stylelint',
+      \ 'coc-stylelintplus'
       \]
 " All of your Plugins must be added before the following line
 call plug#end()            " required
