@@ -48,7 +48,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 " Plug 'tpope/vim-commentary'
 " Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-fugitive' "Git tools
+" Git tools
+Plug 'tpope/vim-fugitive' 
+Plug 'mhinz/vim-signify'
+
 Plug 'tpope/vim-surround'
 Plug 'metakirby5/codi.vim'
 " Plug 'frazrepo/vim-rainbow' "Disables normal syntax highlighting...stupid
@@ -157,6 +160,9 @@ set listchars=tab:→\ ,eol:↲,space:␣,trail:•,extends:⟩,precedes:⟨
 
 " Setting for commenter to not replace hyphens
 let g:tcomment#replacements_xml = {'&': '&', '-': '-'}
+
+" git-signify default updatetime 4000ms is not good for async update
+set updatetime=100
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
