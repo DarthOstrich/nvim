@@ -110,6 +110,11 @@ hi Search guibg=darkslateblue guifg=wheat
 " Enable Rainbow Brackets  
 " let g:rainbow_active = 1
 
+" Signify colors to match Embark
+hi SignifySignAdd    ctermfg=green  guifg=#62d196 cterm=NONE gui=NONE
+hi SignifySignDelete ctermfg=red    guifg=#F02E6E cterm=NONE gui=NONE
+hi SignifySignChange ctermfg=yellow guifg=#F2B482 cterm=NONE gui=NONE
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Core Functionality (general settings, keyboard shortcuts)
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
