@@ -169,6 +169,10 @@ let g:tcomment#replacements_xml = {'&': '&', '-': '-'}
 " git-signify default updatetime 4000ms is not good for async update
 set updatetime=100
 
+" Line bubbling #1 tip https://www.youtube.com/watch?v=hSHATqh8svM
+nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
