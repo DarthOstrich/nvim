@@ -21,11 +21,17 @@ set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
 call plug#begin('~/.config/nvim/plugged')
 
 " Themes
+" Current Themes
+" Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'bluz71/vim-nightfly-guicolors'
+
+" Ancient Themes
+" Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
 " Plug 'haishanh/night-owl.vim'
-Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'morhetz/gruvbox'
 " Plug 'jnurmine/zenburn' "Theme plugin
+
 " Plug 'ryanoasis/vim-devicons' "Icons for filetypes
 Plug 'vim-airline/vim-airline' "Status bar
 Plug 'vim-airline/vim-airline-themes' "Applicable themes
@@ -94,16 +100,16 @@ if (has("termguicolors"))
 syntax enable
 
 " colors OceanicNext
-colorscheme embark 
+colorscheme nightfly 
 
 " To enable the lightline theme
-let g:lightline = { 'colorscheme': 'embark' }
+let g:lightline = { 'colorscheme': 'nightfly' }
 
 
 " let g:gruvbox_contrast_dark = 'soft'
 
 " adds blue highlight to vim in visual mode selections
-hi Visual cterm=bold ctermbg=Yellow ctermfg=NONE
+" hi Visual cterm=bold ctermbg=Yellow ctermfg=NONE
 " Search Highlight
 hi Search guibg=darkslateblue guifg=wheat
 
