@@ -22,11 +22,11 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Themes
 " Current Themes
-" Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Ancient Themes
-" Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
 " Plug 'haishanh/night-owl.vim'
 " Plug 'morhetz/gruvbox'
@@ -59,7 +59,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
 Plug 'tpope/vim-surround'
-Plug 'metakirby5/codi.vim'
+" Plug 'metakirby5/codi.vim'
 " Plug 'frazrepo/vim-rainbow' "Disables normal syntax highlighting...stupid
 Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 " Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
@@ -100,10 +100,11 @@ if (has("termguicolors"))
 syntax enable
 
 " colors OceanicNext
-colorscheme nightfly 
+colorscheme palenight 
 
 " To enable the lightline theme
-let g:lightline = { 'colorscheme': 'nightfly' }
+" let g:lightline = { 'colorscheme': 'embark' }
+let g:airline_theme = "palenight"
 
 
 " let g:gruvbox_contrast_dark = 'soft'
@@ -120,6 +121,12 @@ hi Search guibg=darkslateblue guifg=wheat
 hi SignifySignAdd    ctermfg=green  guifg=#62d196 cterm=NONE gui=NONE
 hi SignifySignDelete ctermfg=red    guifg=#F02E6E cterm=NONE gui=NONE
 hi SignifySignChange ctermfg=yellow guifg=#F2B482 cterm=NONE gui=NONE
+
+" set color for concealed items, including 'declared but never used'
+" For nightfly
+" hi Conceal guifg=#7c8f8f 
+" For palenight
+hi Conceal guifg=#697098
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Core Functionality (general settings, keyboard shortcuts)
