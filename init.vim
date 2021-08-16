@@ -22,8 +22,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Themes
 " Current Themes
-Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'embark-theme/vim', { 'as': 'embark' }
+" Plug 'bluz71/vim-nightfly-guicolors'
+" Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'drewtempelmeyer/palenight.vim'
 
 " Ancient Themes
@@ -118,9 +118,9 @@ hi Search guibg=darkslateblue guifg=wheat
 " let g:rainbow_active = 1
 
 " Signify colors to match Embark
-hi SignifySignAdd    ctermfg=green  guifg=#62d196 cterm=NONE gui=NONE
-hi SignifySignDelete ctermfg=red    guifg=#F02E6E cterm=NONE gui=NONE
-hi SignifySignChange ctermfg=yellow guifg=#F2B482 cterm=NONE gui=NONE
+hi SignifySignAdd    ctermfg=green  guifg=#C3E88D cterm=NONE gui=NONE
+hi SignifySignDelete ctermfg=red    guifg=#ff5370 cterm=NONE gui=NONE
+hi SignifySignChange ctermfg=yellow guifg=#ffcb6b cterm=NONE gui=NONE
 
 " set color for concealed items, including 'declared but never used'
 " For nightfly
