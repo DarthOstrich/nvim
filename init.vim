@@ -52,6 +52,7 @@ Plug 'jiangmiao/auto-pairs' "Autocomplete brackets.
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
+Plug 'jdhao/better-escape.vim' " Fix jk
 " Plug 'tpope/vim-commentary'
 " Plug 'scrooloose/nerdcommenter'
 " Git tools
@@ -149,8 +150,9 @@ set smartcase
 
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " map jk to esc
-:imap jk <Esc>
+" :imap jk <Esc> " Managed by a plugin
 
 " save with zz
 nnoremap zz :update<cr>
@@ -290,7 +292,7 @@ let g:prettier#config#bracket_spacing = 'true'
 
 " runs prettier on file formats
 " autocmd BufWritePre *.html,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte PrettierAsync
-
+au FileType css,scss let b:prettier_exec_cmd = "coc-stylelintplus"
 
 " Emmet
 let g:user_emmet_leader_key=',' " Redefine emmet leader key. It's now ,,
