@@ -71,7 +71,6 @@ let g:coc_global_extensions = [
       \ 'coc-ultisnips',
       \ 'coc-snippets',
       \ 'coc-explorer',
-      \ 'ReactSnippets' ,
       \ 'coc-vimlsp',
       \ 'coc-tsserver',
       \ 'coc-svelte',
