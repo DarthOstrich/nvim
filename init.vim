@@ -13,8 +13,7 @@ if empty(glob('~/.config/nvim/plugged/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
-set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
+set rtp+=/opt/homebrew/opt/fzf "Fuzzy finder, installed via homebrew
 
 
 
