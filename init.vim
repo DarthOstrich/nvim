@@ -49,7 +49,7 @@ Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'jiangmiao/auto-pairs' "Autocomplete brackets. 
 Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'jdhao/better-escape.vim' " Fix jk
 " Plug 'tpope/vim-commentary'
@@ -64,6 +64,9 @@ Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 " Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Coc extension list
 let g:coc_global_extensions = [
@@ -149,6 +152,9 @@ set smartcase
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" remap space to be leader
+map <Space> <Leader>
+
 " map jk to esc
 " :imap jk <Esc> " Managed by a plugin
 
@@ -159,8 +165,13 @@ nnoremap zz :update<cr>
 set clipboard=unnamed
 
 " remap Ctrl-p for finding files run Fzf :Files command
-nnoremap <C-p> :Files<Cr>
-nnoremap <C-f> :Rg<Cr>
+" nnoremap <C-p> :Files<Cr>
+" nnoremap <C-f> :Rg<Cr>
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Disable highlight with esc
 nnoremap <esc> :noh<return><esc>
@@ -209,7 +220,7 @@ nnoremap <leader>j :m .+1<CR>==
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coc Explorer (The New NerdTree) 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:nmap <space>e :CocCommand explorer<CR>
+:nmap <leader>e :CocCommand explorer<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Conquer of Completion 
