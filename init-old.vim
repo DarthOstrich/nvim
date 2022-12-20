@@ -81,8 +81,14 @@ let g:coc_global_extensions = [
       \ 'coc-css',
       \ 'coc-stylelintplus'
       \]
+
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'
+
 " All of your Plugins must be added before the following line
 call plug#end()            " required
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -220,7 +226,7 @@ nnoremap <leader>j :m .+1<CR>==
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coc Explorer (The New NerdTree) 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:nmap <leader>e :CocCommand explorer<CR>
+" :nmap <leader>e :CocCommand explorer<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Conquer of Completion 
