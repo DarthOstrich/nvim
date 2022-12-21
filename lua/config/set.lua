@@ -27,7 +27,6 @@ set backup
 set backupdir=/tmp
 " tell vim where to put swap files
 set dir=/tmp
-set timeoutlen=1000        " speed vim up
 set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set ttyfast                " Rendering
 set lazyredraw

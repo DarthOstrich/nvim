@@ -1,4 +1,4 @@
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 color = "palenight"
 vim.cmd.colorscheme(color)
 
