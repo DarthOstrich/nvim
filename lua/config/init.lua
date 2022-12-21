@@ -1,3 +1,5 @@
+vim.o.autoread = true         -- reload files 
+
 require('config.remap')
 
 -- nvim-tree

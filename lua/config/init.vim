@@ -1,9 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-set exrc  										" Allows project specific .vimrc
-set autoread                  " reload files 
-
-
 "Auto install Plug https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 " This doesn't work for some reason
 " Need to install Plug first before this init file will work.
@@ -100,43 +94,6 @@ call plug#end()            " required
 
 
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Theme Settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if (has("termguicolors"))
-   set termguicolors
- endif
-syntax enable
-
-" colors OceanicNext
-colorscheme palenight 
-
-" To enable the lightline theme
-" let g:lightline = { 'colorscheme': 'embark' }
-let g:airline_theme = "palenight"
-
-
-" let g:gruvbox_contrast_dark = 'soft'
-
-" adds blue highlight to vim in visual mode selections
-" hi Visual cterm=bold ctermbg=Yellow ctermfg=NONE
-" Search Highlight
-hi Search guibg=darkslateblue guifg=wheat
-
-" Enable Rainbow Brackets  
-" let g:rainbow_active = 1
-
-" Signify colors to match Embark
-hi SignifySignAdd    ctermfg=green  guifg=#C3E88D cterm=NONE gui=NONE
-hi SignifySignDelete ctermfg=red    guifg=#ff5370 cterm=NONE gui=NONE
-hi SignifySignChange ctermfg=yellow guifg=#ffcb6b cterm=NONE gui=NONE
-
-" set color for concealed items, including 'declared but never used'
-" For nightfly
-" hi Conceal guifg=#7c8f8f 
-" For palenight
-hi Conceal guifg=#697098
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Core Functionality (general settings, keyboard shortcuts)
