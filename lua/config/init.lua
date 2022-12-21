@@ -1,6 +1,5 @@
-vim.o.autoread = true         -- reload files 
-
 require('config.remap')
+require('config.set')
 
 -- nvim-tree
 -- examples for your init.lua
@@ -8,9 +7,6 @@ require('config.remap')
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
 
 -- empty setup using defaults
 -- OR setup with some options

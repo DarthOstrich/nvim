@@ -84,35 +84,9 @@ call plug#end()            " required
 
 
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" External Settings files 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" source $HOME/.config/nvim/plug-config/coc.vim
-
-
-
-
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Core Functionality (general settings, keyboard shortcuts)
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" deal with swps and backups here
-" create backups
-set backup
-" tell vim where to put its backup files
-set backupdir=/tmp
-" tell vim where to put swap files
-set dir=/tmp
-set timeoutlen=1000        " speed vim up
-set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
-set ttyfast                " Rendering
-set lazyredraw
-set tw=200                 " Line Length set to 200 😲
-" Use smart case for searching
-set ignorecase
-set smartcase
 
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -126,8 +100,6 @@ map <Space> <Leader>
 " save with zz
 nnoremap zz :update<cr>
 
-" set clipboard to easily copy from vim and paste into OSx
-set clipboard=unnamed
 
 " remap Ctrl-p for finding files run Fzf :Files command
 " nnoremap <C-p> :Files<Cr>
@@ -141,22 +113,15 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " Disable highlight with esc
 nnoremap <esc> :noh<return><esc>
 
-" Live Substitution
-set inccommand=split
 
 
 "This unsets the "last search pattern" register by hitting return
 " nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
-" add characters for punctuation, use `:set list` to toggle
-set showbreak=↪\ 
-set listchars=tab:→\ ,eol:↲,space:␣,trail:•,extends:⟩,precedes:⟨
 
 " Setting for commenter to not replace hyphens
 let g:tcomment#replacements_xml = {'&': '&', '-': '-'}
 
-" git-signify default updatetime 4000ms is not good for async update
-set updatetime=100
 
 " Line bubbling #1 tip https://www.youtube.com/watch?v=hSHATqh8svM
 nnoremap <leader>k :m .-2<CR>==
@@ -230,37 +195,11 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2     " tab spacing
-set expandtab     " tabs are now spaces
-set ai            " Auto indent
-" set si            " Smart indent
-set wrap          " Wrap lines
-set nowrap        " Don't wrap text
-
-
-" Show line numbers
-" turn absolute line numbers on
-:set number
-:set nu
-
-" Code fold bliss
-" https://www.linux.com/learn/vim-tips-folding-fun
-" set foldmethod=indent
-
-" Blink cursor on error instead of beeping (grr)
-set visualbell
-set t_vb=
-
 " Change cursor shape between insert and normal mode in iTerm2.app
 if $TERM_PROGRAM =~ "iTerm"
     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 endif
-
-" Shows the title within the window
-set title titlestring=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Prettier
@@ -286,6 +225,3 @@ let g:user_emmet_leader_key=',' " Redefine emmet leader key. It's now ,,
 " Stolen from vim-graphql/ftdetect/graphql.vim
 au BufRead,BufNewFile *.prisma setfiletype graphql
 " au BufNewFile,BufRead *.svelte :set filetype=html
-
-set secure "disables unsafe commands in project specific .vimrc
-
