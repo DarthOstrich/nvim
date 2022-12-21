@@ -5,7 +5,7 @@ vim.cmd.colorscheme(color)
 airline_theme = "palenight"
 
 -- highlight colors
-vim.api.nvim_set_hl(0, "Search", { guibg = darkslateblue, guifg = wheat})
+-- vim.api.nvim_set_hl(0, "Search", { guibg = darkslateblue, guifg = wheat})
 -- vim.api.nvim_set_hl(0, "Conceal", { guifg = #697098 })
 vim.cmd("hi Conceal guifg=#697098")
 -- vim.api.nvim_set_hl(0, "SignifySignAdd", { ctermfg=green, guifg=#C3E88D, cterm=NONE, gui=NONE})

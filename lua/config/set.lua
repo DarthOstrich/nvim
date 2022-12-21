@@ -17,6 +17,8 @@ vim.opt.ai = true            --" Auto indent
 vim.opt.smartindent = true      
 vim.opt.wrap = false         --" Wrap lines
 
+vim.cmd([[set title titlestring=]])
+
 --[[
 from old vim files
 
