@@ -17,6 +17,13 @@ vim.opt.ai = true            --" Auto indent
 vim.opt.smartindent = true      
 vim.opt.wrap = false         --" Wrap lines
 
+
+-- Show line numbers
+vim.opt.nu = true
+-- turn absolute line numbers on
+-- vim.opt.relativenumber = true
+
+-- Shows the title within the window
 vim.cmd([[set title titlestring=]])
 
 --[[
@@ -57,10 +64,6 @@ set wrap          " Wrap lines
 set nowrap        " Don't wrap text
 
 
-" Show line numbers
-" turn absolute line numbers on
-:set number
-:set nu
 
 " Code fold bliss
 " https://www.linux.com/learn/vim-tips-folding-fun
@@ -76,7 +79,5 @@ if $TERM_PROGRAM =~ "iTerm"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 endif
 
-" Shows the title within the window
-set title titlestring=
 
 --]]

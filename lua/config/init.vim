@@ -91,29 +91,8 @@ call plug#end()            " required
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" remap space to be leader
-map <Space> <Leader>
-
-" map jk to esc
-" :imap jk <Esc> " Managed by a plugin
-
-" save with zz
-nnoremap zz :update<cr>
-
-
-" remap Ctrl-p for finding files run Fzf :Files command
-" nnoremap <C-p> :Files<Cr>
-" nnoremap <C-f> :Rg<Cr>
-" Using Lua functions
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-
 " Disable highlight with esc
 nnoremap <esc> :noh<return><esc>
-
-
 
 "This unsets the "last search pattern" register by hitting return
 " nnoremap <silent> <CR> :nohlsearch<CR><CR>
@@ -126,9 +105,6 @@ let g:tcomment#replacements_xml = {'&': '&', '-': '-'}
 " Line bubbling #1 tip https://www.youtube.com/watch?v=hSHATqh8svM
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
-
-" leader p will paste last yanked line without yanking highlighted line
-vnoremap <leader>p "_dP
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
