@@ -106,30 +106,6 @@ let g:tcomment#replacements_xml = {'&': '&', '-': '-'}
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => netrw
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Don't really use this anymore, but leaving in here for reference
-" let g:netrw_liststyle=3 "Tree Style [3]
-" let g:netrw_banner=0
-" let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
-" autocmd FileType netrw set nolist
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Changes NerdTree Toggle to Ctrl + n
-" map <C-n> :NERDTreeToggle<CR> 
-" autocmd VimEnter * NERDTree "Toggles Nerdtree on vim open
-" let NERDTreeQuitOnOpen = 1 "closes NerdTree when opening a file
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Coc Explorer (The New NerdTree) 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" :nmap <leader>e :CocCommand explorer<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Conquer of Completion 
@@ -167,7 +143,6 @@ function! s:show_documentation()
   endif
 endfunction
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -177,24 +152,7 @@ if $TERM_PROGRAM =~ "iTerm"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Prettier
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Autosave
-" disables autosave feature
-let g:prettier#autoformat = 0
 
-" print spaces between brackets
-" Prettier default: true
-let g:prettier#config#bracket_spacing = 'true'
-
-" runs prettier on file formats
-" autocmd BufWritePre *.html,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte PrettierAsync
-au FileType css,scss let b:prettier_exec_cmd = "coc-stylelintplus"
-
-" Emmet
-let g:user_emmet_leader_key=',' " Redefine emmet leader key. It's now ,,
-" let g:user_emmet_expandabbr_key='<Tab>'
 
 " Syntax stuff
 " This lets vim know that .prisma files should be graphql. 

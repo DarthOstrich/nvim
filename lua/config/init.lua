@@ -18,3 +18,6 @@ require("nvim-tree").setup({
 })
 
 -- END nvim-tree
+
+-- setting here works but not in /after/plugin/emmet.lua...dunno why
+vim.g.user_emmet_leader_key = ','
