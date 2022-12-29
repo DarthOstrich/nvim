@@ -10,7 +10,7 @@ airline_theme = "palenight"
 vim.cmd("hi Conceal guifg=#697098")
 -- vim.api.nvim_set_hl(0, "SignifySignAdd", { ctermfg=green, guifg=#C3E88D, cterm=NONE, gui=NONE})
 
-
+require'colorizer'.setup()
 
 --[[
 if (has("termguicolors"))

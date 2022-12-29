@@ -9,12 +9,12 @@ return require('packer').startup(function(use)
 
   -- Themes
   -- Current Themes
-  -- use 'drewtempelmeyer/palenight.vim'
-  use 'kyazdani42/nvim-palenight.lua'
+  use 'drewtempelmeyer/palenight.vim'
 
   use 'vim-airline/vim-airline' --Status bar
   use 'vim-airline/vim-airline-themes' --Applicable themes
-  use 'ap/vim-css-color' --  color name highlighter
+  -- use 'ap/vim-css-color' --  color name highlighter
+  use 'norcalli/nvim-colorizer.lua' -- colorizer
 
   -- Tools
   -- use 'prettier/vim-prettier', { 'do': 'yarn install' }
