@@ -9,7 +9,8 @@ return require('packer').startup(function(use)
 
   -- Themes
   -- Current Themes
-  use 'drewtempelmeyer/palenight.vim'
+  -- use 'drewtempelmeyer/palenight.vim'
+  use 'kyazdani42/nvim-palenight.lua'
 
   use 'vim-airline/vim-airline' --Status bar
   use 'vim-airline/vim-airline-themes' --Applicable themes
@@ -22,7 +23,7 @@ return require('packer').startup(function(use)
   use 'jdhao/better-escape.vim' -- Fix jk
 
   -- Git tools
-  use 'tpope/vim-fugitive' 
+  use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
 
   use 'tpope/vim-surround'
@@ -69,7 +70,7 @@ return require('packer').startup(function(use)
 
 end)
 
-[[--
+--[[
   -- OLD Packages
   -- Language Syntax Support
   -- use 'pangloss/vim-javascript' --JS highlighting
