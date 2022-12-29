@@ -88,23 +88,6 @@ call plug#end()            " required
 " Core Functionality (general settings, keyboard shortcuts)
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Disable Autocommenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Disable highlight with esc
-nnoremap <esc> :noh<return><esc>
-
-"This unsets the "last search pattern" register by hitting return
-" nnoremap <silent> <CR> :nohlsearch<CR><CR>
-
-
-" Setting for commenter to not replace hyphens
-let g:tcomment#replacements_xml = {'&': '&', '-': '-'}
-
-
-" Line bubbling #1 tip https://www.youtube.com/watch?v=hSHATqh8svM
-nnoremap <leader>k :m .-2<CR>==
-nnoremap <leader>j :m .+1<CR>==
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -151,11 +134,3 @@ if $TERM_PROGRAM =~ "iTerm"
     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 endif
-
-
-
-" Syntax stuff
-" This lets vim know that .prisma files should be graphql. 
-" Stolen from vim-graphql/ftdetect/graphql.vim
-au BufRead,BufNewFile *.prisma setfiletype graphql
-" au BufNewFile,BufRead *.svelte :set filetype=html

@@ -21,3 +21,19 @@ require("nvim-tree").setup({
 
 -- setting here works but not in /after/plugin/emmet.lua...dunno why
 vim.g.user_emmet_leader_key = ','
+
+-- Disable Autocommenting
+vim.cmd([[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
+
+
+
+--[[
+" Disable Autocommenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Syntax stuff
+" This lets vim know that .prisma files should be graphql. 
+" Stolen from vim-graphql/ftdetect/graphql.vim
+au BufRead,BufNewFile *.prisma setfiletype graphql
+" au BufNewFile,BufRead *.svelte :set filetype=html
+--]]
