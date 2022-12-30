@@ -9,19 +9,13 @@ return require('packer').startup(function(use)
 
   -- Themes
   -- Current Themes
-  -- use 'drewtempelmeyer/palenight.vim'
-  -- use 'shaunsingh/moonlight.nvim'
-  -- use 'bluz71/vim-nightfly-colors'
   use 'folke/tokyonight.nvim'
 
 
-  -- use 'vim-airline/vim-airline' --Status bar
-  -- use 'vim-airline/vim-airline-themes' --Applicable themes
   use {
     'nvim-lualine/lualine.nvim',
     -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  -- use 'ap/vim-css-color' --  color name highlighter
   use 'norcalli/nvim-colorizer.lua' -- colorizer
 
   -- Tools
@@ -36,7 +30,6 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-surround'
   use 'mattn/emmet-vim' --A bit annoying because it takes over my Tab key
-  -- use 'neoclide/coc.nvim', {'branch': 'release'} --autocompletion
 
   use {
     'nvim-tree/nvim-tree.lua',
