@@ -15,8 +15,12 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
 
 
-  use 'vim-airline/vim-airline' --Status bar
-  use 'vim-airline/vim-airline-themes' --Applicable themes
+  -- use 'vim-airline/vim-airline' --Status bar
+  -- use 'vim-airline/vim-airline-themes' --Applicable themes
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
   -- use 'ap/vim-css-color' --  color name highlighter
   use 'norcalli/nvim-colorizer.lua' -- colorizer
 
