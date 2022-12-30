@@ -174,11 +174,6 @@ _G.packer_plugins = {
     path = "/Users/jarednut/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["palenight.vim"] = {
-    loaded = true,
-    path = "/Users/jarednut/.local/share/nvim/site/pack/packer/start/palenight.vim",
-    url = "https://github.com/drewtempelmeyer/palenight.vim"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/jarednut/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -193,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jarednut/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/jarednut/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-airline"] = {
     loaded = true,

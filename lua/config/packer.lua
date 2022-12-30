@@ -9,7 +9,11 @@ return require('packer').startup(function(use)
 
   -- Themes
   -- Current Themes
-  use 'drewtempelmeyer/palenight.vim'
+  -- use 'drewtempelmeyer/palenight.vim'
+  -- use 'shaunsingh/moonlight.nvim'
+  -- use 'bluz71/vim-nightfly-colors'
+  use 'folke/tokyonight.nvim'
+
 
   use 'vim-airline/vim-airline' --Status bar
   use 'vim-airline/vim-airline-themes' --Applicable themes
@@ -71,13 +75,13 @@ return require('packer').startup(function(use)
 end)
 
 --[[
-  -- OLD Packages
-  -- Language Syntax Support
-  -- use 'pangloss/vim-javascript' --JS highlighting
-  -- use 'mxw/vim-jsx' --JSX syntax highlighting
-  -- use 'jparise/vim-graphql' --graphql syntax highlighting
-  -- use 'digitaltoad/vim-pug' --Pug highlighting
-  -- use 'styled-components/vim-styled-components', { 'branch': 'main' }
-  -- use 'leafOfTree/vim-svelte-plugin'
+-- OLD Packages
+-- Language Syntax Support
+-- use 'pangloss/vim-javascript' --JS highlighting
+-- use 'mxw/vim-jsx' --JSX syntax highlighting
+-- use 'jparise/vim-graphql' --graphql syntax highlighting
+-- use 'digitaltoad/vim-pug' --Pug highlighting
+-- use 'styled-components/vim-styled-components', { 'branch': 'main' }
+-- use 'leafOfTree/vim-svelte-plugin'
 
 --]]
