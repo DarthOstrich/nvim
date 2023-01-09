@@ -1,5 +1,6 @@
 require('config.remap')
 require('config.set')
+require('config.packer')
 
 -- nvim-tree
 -- examples for your init.lua
