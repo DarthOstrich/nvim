@@ -26,6 +26,12 @@ vim.opt.nu = true
 -- Shows the title within the window
 vim.cmd([[set title titlestring=]])
 
+-- keeps lines above and below for scroll
+vim.opt.scrolloff = 8
+
+-- incremental search
+vim.opt.incsearch = true
+
 --[[
 from old vim files
 
