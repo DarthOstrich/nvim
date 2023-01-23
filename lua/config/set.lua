@@ -32,6 +32,9 @@ vim.opt.scrolloff = 8
 -- incremental search
 vim.opt.incsearch = true
 
+-- stop vim from fixing EOL stuff
+vim.opt.fixendofline = false
+
 --[[
 from old vim files
 
