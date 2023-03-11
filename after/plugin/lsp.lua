@@ -6,7 +6,7 @@ lsp.ensure_installed({
   -- "cssmodules_ls",
   'tsserver',
   'eslint',
-  'sumneko_lua',
+  'lua_ls',
   'intelephense',
   'stylelint_lsp',
 })
