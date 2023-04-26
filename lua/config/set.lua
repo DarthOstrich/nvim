@@ -9,6 +9,9 @@ vim.opt.smartcase = true
 -- set clipboard to easily copy from vim and paste into OSx
 vim.opt.clipboard="unnamed"
 
+-- disable mouse
+vim.opt.mouse = ""
+
 
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2         --" tab spacing
