@@ -17,7 +17,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2         --" tab spacing
 vim.opt.expandtab = true     --" tabs are now spaces
 vim.opt.ai = true            --" Auto indent
-vim.opt.smartindent = true      
+vim.opt.smartindent = true
 vim.opt.wrap = false         --" Wrap lines
 
 
@@ -35,7 +35,7 @@ vim.opt.scrolloff = 8
 -- incremental search
 vim.opt.incsearch = true
 
--- stop vim from fixing EOL stuff
+-- stop vim from fixing EOL
 vim.opt.fixendofline = false
 
 --[[
