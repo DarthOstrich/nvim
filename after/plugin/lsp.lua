@@ -21,6 +21,12 @@ lsp.ensure_installed({
 --   }
 -- })
 
+-- Configure stylelint_lsp to only lint css and scss files
+-- fixes issue with stylelint_lsp looking in config and .ts files
+lsp.configure('stylelint_lsp', {
+  filetypes = { "css", "scss" }
+})
+
 lsp.nvim_workspace()
 
 lsp.setup()
