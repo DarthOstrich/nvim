@@ -1,7 +1,7 @@
 -- require('moonlight').set()
 vim.cmd [[colorscheme tokyonight]]
 vim.opt.termguicolors = true
-airline_theme = "tokyonight"
+-- airline_theme = "tokyonight"
 
 -- highlight colors
 -- vim.api.nvim_set_hl(0, "Search", { guibg = darkslateblue, guifg = wheat})
