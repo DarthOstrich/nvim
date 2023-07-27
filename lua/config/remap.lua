@@ -2,6 +2,7 @@
 vim.g.mapleader = ' '
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", {silent = true, noremap = true})
+vim.keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>", {silent = true, noremap = true})
 
 -- save with zz
 vim.keymap.set("n", "zz", ":update<cr>")
