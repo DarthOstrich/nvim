@@ -38,6 +38,11 @@ vim.opt.incsearch = true
 -- stop vim from fixing EOL
 vim.opt.fixendofline = false
 
+-- ignore whitespace in diffs
+-- vim.cmd([[set diffopt+=iwhite]])
+vim.opt.diffopt:append("iwhite")
+
+
 --[[
 from old vim files
 
