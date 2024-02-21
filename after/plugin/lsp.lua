@@ -1,36 +1,38 @@
-local lsp = require('lsp-zero')
-lsp.preset('recommended')
+local lsp_zero = require('lsp-zero')
 
-lsp.ensure_installed({
-  -- "cssls",
-  -- "cssmodules_ls",
-  'tsserver',
-  'eslint',
-  'lua_ls',
-  'intelephense',
-  'stylelint_lsp',
+lsp_zero.on_attach(function(client, bufnr)
+  lsp_zero.default_keymaps({buffer = bufnr})
+end)
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  -- Replace the language servers listed here
+  -- with the ones you want to install
+  ensure_installed = {
+    'tsserver',
+    'eslint',
+    'lua_ls',
+    'intelephense',
+    'stylelint_lsp',
+  },
+  handlers = {
+    lsp_zero.default_setup,
+  }
 })
--- lsp.configure('tsserver', {
---   on_attach = function(client, bufnr)
---     print('hello tsserver')
---   end,
---   settings = {
---     completions = {
---       completeFunctionCalls = true
---     }
---   }
--- })
 
--- Configure stylelint_lsp to only lint css and scss files
--- fixes issue with stylelint_lsp looking in config and .ts files
-lsp.configure('stylelint_lsp', {
+require('lspconfig').stylelint_lsp.setup({
   filetypes = { "css", "scss" }
 })
 
-lsp.nvim_workspace()
-
-lsp.setup()
+-- diagnostics
+-- lsp_zero.set_sign_icons({
+--   error = '✘',
+--   warn = '▲',
+--   hint = '⚑',
+--   info = ''
+-- })
 
 vim.diagnostic.config({
-    virtual_text = true,
+  virtual_text = true,
+  severity_sort = true,
 })
