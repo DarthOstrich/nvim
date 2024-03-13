@@ -17,12 +17,19 @@ require('mason-lspconfig').setup({
   },
   handlers = {
     lsp_zero.default_setup,
+    stylelint_lsp = function()
+      require('lspconfig').stylelint_lsp.setup({
+        filetypes = { "css", "scss" },
+        settings = {
+          stylelintplus = {
+            -- see available options in stylelint-lsp documentation
+          }
+        }
+      })
+    end,
   }
 })
 
-require('lspconfig').stylelint_lsp.setup({
-  filetypes = { "css", "scss" }
-})
 
 -- diagnostics
 -- lsp_zero.set_sign_icons({
