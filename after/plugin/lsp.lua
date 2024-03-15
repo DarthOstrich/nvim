@@ -31,6 +31,24 @@ require('mason-lspconfig').setup({
 })
 
 
+local cmp = require('cmp')
+local cmp_format = require('lsp-zero').cmp_format({details = true})
+
+cmp.setup({
+  -- default keybindings for nvim-cmp are here:
+  -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/README.md#keybindings-1
+  mapping = cmp.mapping.preset.insert({
+    -- confirm completion item
+    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+
+    -- trigger completion menu
+    -- doesn't work if its not disabled
+    -- ['<C-Space>'] = cmp.mapping.complete(),
+  }),
+  --- (Optional) Show source name in completion menu
+  formatting = cmp_format,
+})
+
 -- diagnostics
 -- lsp_zero.set_sign_icons({
 --   error = '✘',
