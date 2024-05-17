@@ -4,6 +4,9 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+-- doesn't work
+-- local regexPattern = '["{([\\s\\S]*)}", ":\\s*[\'\"`]([^\'\"`]*)[\'\"`]"]'
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
@@ -14,6 +17,7 @@ require('mason-lspconfig').setup({
     'lua_ls',
     'intelephense',
     'stylelint_lsp',
+    'tailwindcss',
   },
   handlers = {
     lsp_zero.default_setup,
@@ -25,6 +29,16 @@ require('mason-lspconfig').setup({
             -- see available options in stylelint-lsp documentation
           }
         }
+      })
+    end,
+    tailwindcss = function()
+      require('lspconfig').tailwindcss.setup({
+        includeLanguages = { "css", "scss", "ts" },
+        -- experimental = {
+        --   classRegex = {
+        --     regexPattern
+        --   }
+        -- }
       })
     end,
   }
