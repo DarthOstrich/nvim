@@ -1,2 +1,3 @@
 -- vim.cmd('source $HOME/.config/nvim/lua/config/init.vim')
-require('config')
+require('config.core')
+require('config.plugins')

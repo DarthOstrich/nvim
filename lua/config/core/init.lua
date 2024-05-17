@@ -1,8 +1,7 @@
 -- require('config.lazy')
-require('config.packer')
-require('config.remap')
-require('config.set')
-require('config.autocommand')
+require('config.core.remap')
+require('config.core.set')
+require('config.core.autocommand')
 
 -- nvim-tree
 -- examples for your init.lua
