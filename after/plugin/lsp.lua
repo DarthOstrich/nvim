@@ -33,7 +33,21 @@ require('mason-lspconfig').setup({
     end,
     tailwindcss = function()
       require('lspconfig').tailwindcss.setup({
-        includeLanguages = { "css", "scss", "ts" },
+        -- includeLanguages = { "css", "scss", "ts" },
+        settings = {
+          includeLanguages = { "css", "scss", "ts" },
+          -- wrapperClasses doesn't work because it expects it to be wrapperClases="classnames"
+          -- tailwindCSS = {
+          --   classAttributes = {
+          --     "class",
+          --     "className",
+          --     "class:list",
+          --     "classList",
+          --     "ngClass",
+          --     "wrapperClasses"
+          --   }
+          -- }
+        }
         -- experimental = {
         --   classRegex = {
         --     regexPattern
