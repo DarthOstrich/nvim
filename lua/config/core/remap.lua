@@ -6,6 +6,7 @@ vim.keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>", {silent = true, noremap =
 
 -- save with zz
 vim.keymap.set("n", "zz", ":update<cr>")
+vim.keymap.set("n", "ZZ", ":wall<cr>")
 
 -- leader p will paste last yanked line without yanking highlighted line
 vim.keymap.set("x", "<leader>p", [["_dP]])
