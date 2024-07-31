@@ -7,7 +7,8 @@ return require('packer').startup(function(use)
 
   -- Themes
   -- Current Themes
-  use 'folke/tokyonight.nvim'
+  -- use 'folke/tokyonight.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   use {
     'nvim-lualine/lualine.nvim',

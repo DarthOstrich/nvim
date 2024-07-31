@@ -1,5 +1,6 @@
 -- require('moonlight').set()
-vim.cmd [[colorscheme tokyonight]]
+-- vim.cmd [[colorscheme tokyonight]]
+vim.cmd.colorscheme "catppuccin"
 vim.opt.termguicolors = true
 -- airline_theme = "tokyonight"
 
