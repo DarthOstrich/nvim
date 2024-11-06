@@ -16,12 +16,13 @@ require("lazy").setup({
   -- Packer can manage itself in Packer, but not needed here for lazy.nvim
 
   -- Themes
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  -- },
+  { "catppuccin/nvim", as = "catppuccin" },
 
   -- Statusline
   {
