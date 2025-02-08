@@ -41,3 +41,21 @@ o.fixendofline = false
 
 -- Ignore whitespace in diffs
 o.diffopt:append("iwhite")
+
+-- diagnostic options
+vim.diagnostic.config({
+  float = {
+    border = "rounded",
+  },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '✘',
+      [vim.diagnostic.severity.WARN] = '▲',
+      [vim.diagnostic.severity.HINT] = '⚑',
+      [vim.diagnostic.severity.INFO] = '»',
+    },
+    -- these are probably default values
+    -- virtual_text = true,
+    -- severity_sort = true,
+  },
+})
