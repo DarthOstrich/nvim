@@ -3,7 +3,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   -- event = "BufReadPost",
   opts = {
-    theme = "catppuccino",
+    theme = "catppuccin",
     -- extensions = { "lazy", "quickfix", "neo-tree" },
     -- options = {
     --   disabled_filetypes = { statusline = { "neo-tree", "Outline" } },
