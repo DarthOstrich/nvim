@@ -83,9 +83,7 @@ return {
       require('mason-lspconfig').setup({
         ensure_installed = {
           'ts_ls',
-          -- 'eslint',
           'lua_ls',
-          -- 'intelephense',
           'stylelint_lsp',
           'tailwindcss',
         },
