@@ -33,3 +33,11 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+
+-- other plugins from old setup
+-- use 'norcalli/nvim-colorizer.lua' -- colorizer
+-- use 'jiangmiao/auto-pairs' --Autocomplete brackets.
+-- use 'tomtom/tcomment_vim'
+-- use 'tpope/vim-fugitive'
+-- use 'mattn/emmet-vim' --A bit annoying because it takes over my Tab key
