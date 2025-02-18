@@ -82,7 +82,7 @@ return {
 
       require('mason-lspconfig').setup({
         ensure_installed = {
-          'angular-language-server@18.2.0',
+          'angularls@18.2.0',
           -- 'lua_ls',
           -- 'stylelint_lsp',
           -- 'tailwindcss',
