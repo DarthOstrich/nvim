@@ -82,10 +82,11 @@ return {
 
       require('mason-lspconfig').setup({
         ensure_installed = {
-          'ts_ls',
-          'lua_ls',
-          'stylelint_lsp',
-          'tailwindcss',
+          'angular-language-server@18.2.0',
+          -- 'lua_ls',
+          -- 'stylelint_lsp',
+          -- 'tailwindcss',
+          -- 'ts_ls',
         },
         handlers = {
           -- this first function is the "default handler"
