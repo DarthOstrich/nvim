@@ -11,3 +11,4 @@ session
 wiki/
 pack/
 node_modules
+.DS_Store
