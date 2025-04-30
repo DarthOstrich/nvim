@@ -83,6 +83,7 @@ return {
       require('mason-lspconfig').setup({
         ensure_installed = {
           'angularls@18.2.0',
+          'emmet_ls',
           -- 'lua_ls',
           -- 'stylelint_lsp',
           -- 'tailwindcss',
@@ -130,7 +131,6 @@ return {
               -- }
             })
           end,
-
           -- END CONFIG TAKEN FROM V1
         }
       })
