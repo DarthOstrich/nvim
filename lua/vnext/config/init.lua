@@ -1,0 +1,7 @@
+require("vnext.config.options")
+require("vnext.config.globals")
+require("vnext.config.mappings")
+require("vnext.config.lazy")
+require("vnext.config.plugin-mappings")
+require("vnext.config.colors")
+require("vnext.config.autocmds")

@@ -14,6 +14,9 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Disable highlight with esc
 vim.keymap.set("n", "<esc>", ":noh<return><esc>")
 
+-- set emmet leader key
+vim.g.user_emmet_leader_key = ','
+
 --[[
 " remap space to be leader
 map <Space> <Leader>
@@ -26,3 +29,4 @@ map <Space> <Leader>
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 --]]
+
