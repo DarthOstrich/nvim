@@ -48,6 +48,14 @@ return {
       vim.opt.signcolumn = 'yes'
     end,
     config = function()
+      -- Add custom LspRestartAll command
+      vim.api.nvim_create_user_command('LspRestartAll', function()
+        local clients = vim.lsp.get_clients()
+        for _, client in ipairs(clients) do
+          vim.cmd('LspRestart ' .. client.id)
+        end
+      end, {})
+
       local lsp_defaults = require('lspconfig').util.default_config
 
       -- Add cmp_nvim_lsp capabilities settings to lspconfig
@@ -82,7 +90,7 @@ return {
 
       require('mason-lspconfig').setup({
         ensure_installed = {
-          'angularls@18.2.0',
+          -- 'angularls@18.2.0',
           'emmet_ls',
           -- 'lua_ls',
           -- 'stylelint_lsp',
