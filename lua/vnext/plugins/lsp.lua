@@ -49,12 +49,13 @@ return {
     end,
     config = function()
       -- Add custom LspRestartAll command
-      vim.api.nvim_create_user_command('LspRestartAll', function()
-        local clients = vim.lsp.get_clients()
-        for _, client in ipairs(clients) do
-          vim.cmd('LspRestart ' .. client.id)
-        end
-      end, {})
+      -- this doesn't actually work
+      -- vim.api.nvim_create_user_command('LspRestartAll', function()
+      --   local clients = vim.lsp.get_clients()
+      --   for _, client in ipairs(clients) do
+      --     vim.cmd('LspRestart ' .. client.id)
+      --   end
+      -- end, {})
 
       local lsp_defaults = require('lspconfig').util.default_config
 
@@ -88,6 +89,7 @@ return {
         end,
       })
 
+      require('mason').setup()
       require('mason-lspconfig').setup({
         ensure_installed = {
           -- 'angularls@18.2.0',
