@@ -33,7 +33,7 @@ return {
         -- content, so we fall back to regex syntax highlighting for those files.
         disable = function(_, buf)
           for _, line in ipairs(vim.api.nvim_buf_get_lines(buf, 0, -1, false)) do
-            if #line > 1000 then
+            if #line > 500 then
               return true
             end
           end
