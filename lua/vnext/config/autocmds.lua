@@ -13,6 +13,18 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- nvim-treesitter's markdown query predicates crash on Neovim 0.12.2 due to
+-- a node:range() API change. Patch vim.treesitter.start so markdown (including
+-- LSP hover floats) can never activate treesitter, regardless of what calls it.
+local _ts_start = vim.treesitter.start
+vim.treesitter.start = function(buf, lang, ...)
+  local ft = buf and vim.bo[buf] and vim.bo[buf].filetype or ""
+  if lang == "markdown" or lang == "markdown_inline" or ft == "markdown" then
+    return
+  end
+  return _ts_start(buf, lang, ...)
+end
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`

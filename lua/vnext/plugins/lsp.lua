@@ -95,7 +95,7 @@ return {
           -- 'angularls@18.2.0',
           'emmet_ls',
           -- 'lua_ls',
-          -- 'stylelint_lsp',
+          -- stylelint-language-server has no mason-lspconfig mapping yet; configured manually below
           -- 'tailwindcss',
           -- 'ts_ls',
         },
@@ -107,16 +107,6 @@ return {
           end,
 
           -- CONFIG TAKEN FROM V1
-          stylelint_lsp = function()
-            require('lspconfig').stylelint_lsp.setup({
-              filetypes = { "css", "scss" },
-              settings = {
-                stylelintplus = {
-                  -- see available options in stylelint-lsp documentation
-                }
-              }
-            })
-          end,
           tailwindcss = function()
             require('lspconfig').tailwindcss.setup({
               -- includeLanguages = { "css", "scss", "ts" },
@@ -144,6 +134,27 @@ return {
           -- END CONFIG TAKEN FROM V1
         }
       })
+
+      -- stylelint-language-server has no mason-lspconfig mapping, so configure
+      -- it directly via the Neovim 0.11+ vim.lsp.config API.
+      vim.lsp.config('stylelint_language_server', {
+        cmd = { 'stylelint-language-server', '--stdio' },
+        filetypes = { 'css', 'scss' },
+        root_markers = {
+          '.stylelintrc',
+          '.stylelintrc.json',
+          '.stylelintrc.yaml',
+          '.stylelintrc.yml',
+          '.stylelintrc.js',
+          '.stylelintrc.cjs',
+          '.stylelintrc.mjs',
+          'stylelint.config.js',
+          'stylelint.config.cjs',
+          'stylelint.config.mjs',
+          'package.json',
+        },
+      })
+      vim.lsp.enable('stylelint_language_server')
     end
   }
 }

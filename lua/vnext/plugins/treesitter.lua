@@ -31,7 +31,10 @@ return {
         -- Disable treesitter for files with very long lines (minified JS, etc.).
         -- The Angular and HTML parsers crash with a nil-node error on minified
         -- content, so we fall back to regex syntax highlighting for those files.
-        disable = function(_, buf)
+        disable = function(lang, buf)
+          if lang == "markdown" or lang == "markdown_inline" then
+            return true
+          end
           for _, line in ipairs(vim.api.nvim_buf_get_lines(buf, 0, -1, false)) do
             if #line > 500 then
               return true
